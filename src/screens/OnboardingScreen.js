@@ -46,8 +46,8 @@ const OnboardingScreen = ({ navigation }) => {
           </Text>
         ),
       }))}
-      onDone={() => navigation.replace("Home")}
-      onSkip={() => navigation.replace("Home")}
+      onDone={() => navigation.navigate("Home")}
+      onSkip={() => navigation.navigate("Home")}
       containerStyles={tw`p-6`}
     />
   );

@@ -10,7 +10,6 @@ import FeelingsScreen from "./FeelingsScreen";
 import MainTaskScreen from "./MainTaskScreen";
 import ThemeScreen from "./ThemeScreen";
 import WeekendTasksScreen from "./WeekendTasksScreen";
-import HomeScreen from "./HomeScreen";
 import { View } from "react-native";
 import tw from "twrnc";
 import BottomTab from "../components/BottomTab";
@@ -20,15 +19,10 @@ const Stack = createStackNavigator();
 const Home = () => {
   return (
     <View style={tw`flex-1 justify-between`}>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="GoalsScreen">
         <Stack.Screen
           name="BooksScreen"
           component={BooksScreen}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen
