@@ -1,7 +1,7 @@
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import AppNavigator from "./src/screens/AppNavigator";
+import AppNavigator from "./app/screens/_layout";
 import { Provider } from "react-redux";
-import { store } from "./src/app/store";
+import { store } from "./app/app/store";
 
 export default function App() {
   return (
