@@ -2,8 +2,9 @@ import React from "react";
 import { View, Text, TouchableOpacity, ScrollView } from "react-native";
 import tw from "twrnc";
 import { Icon } from "react-native-elements";
+import { router } from "expo-router";
 
-const DashboardBottom = ({ navigation }) => {
+const DashboardBottom = () => {
   return (
     <ScrollView>
       <View style={tw`p-5 bg-white flex-1`}>
@@ -13,7 +14,7 @@ const DashboardBottom = ({ navigation }) => {
 
         <TouchableOpacity
           style={tw`flex-row items-center bg-green-500 py-3 px-5 rounded-lg mb-4`}
-          onPress={() => navigation.navigate("CurrentTaskDetails")}
+          onPress={() => router.navigate("./")}
         >
           <Icon name="clipboard" type="feather" color="white" size={24} />
           <Text style={tw`text-white font-bold text-lg ml-3`}>
@@ -23,7 +24,7 @@ const DashboardBottom = ({ navigation }) => {
 
         <TouchableOpacity
           style={tw`flex-row items-center bg-green-700 py-3 px-5 rounded-lg mb-4`}
-          onPress={() => navigation.navigate("AddMindTask")}
+          onPress={() => router.navigate("./")}
         >
           <Icon name="plus-circle" type="feather" color="white" size={24} />
           <Text style={tw`text-white font-bold text-lg ml-3`}>
@@ -33,7 +34,7 @@ const DashboardBottom = ({ navigation }) => {
 
         <TouchableOpacity
           style={tw`flex-row items-center bg-black py-3 px-5 rounded-lg mb-4`}
-          onPress={() => navigation.navigate("WeekendTasks")}
+          onPress={() => router.navigate("./")}
         >
           <Icon name="sun" type="feather" color="white" size={24} />
           <Text style={tw`text-white font-bold text-lg ml-3`}>
@@ -43,7 +44,7 @@ const DashboardBottom = ({ navigation }) => {
 
         <TouchableOpacity
           style={tw`flex-row items-center bg-gray-800 py-3 px-5 rounded-lg`}
-          onPress={() => navigation.navigate("Goals")}
+          onPress={() => router.navigate("./")}
         >
           <Icon name="flag" type="feather" color="white" size={24} />
           <Text style={tw`text-white font-bold text-lg ml-3`}>

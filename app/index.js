@@ -1,7 +1,8 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { Text, Image } from "react-native";
 import Onboarding from "react-native-onboarding-swiper";
 import tw from "twrnc";
+import { router } from "expo-router";
 
 const slides = [
   {
@@ -26,7 +27,7 @@ const slides = [
   },
 ];
 
-const OnboardingScreen = ({ navigation }) => {
+const OnboardingScreen = () => {
   return (
     <Onboarding
       pages={slides.map((slide) => ({
@@ -46,8 +47,8 @@ const OnboardingScreen = ({ navigation }) => {
           </Text>
         ),
       }))}
-      onDone={() => navigation.replace("Home")}
-      onSkip={() => navigation.replace("Home")}
+      onDone={() => router.replace("/main/home")}
+      onSkip={() => router.replace("/main/home")}
       containerStyles={tw`p-6`}
     />
   );

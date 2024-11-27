@@ -9,8 +9,11 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import tw from "twrnc";
 import { Icon, Card } from "react-native-elements";
-import { selectCurrentMainTask, setCurrentMainTask } from "../app/appSlice";
-import DashboardBottom from "../components/DashboardBottom";
+import {
+  selectCurrentMainTask,
+  setCurrentMainTask,
+} from "../../state/appSlice";
+import DashboardBottom from "../../components/DashboardBottom";
 
 const StayFocusedScreen = () => {
   const dispatch = useDispatch();

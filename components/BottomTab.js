@@ -1,18 +1,17 @@
+import { router } from "expo-router";
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import Icon from "react-native-elements/dist/icons/Icon";
 import tw from "twrnc";
-import { useNavigation } from "@react-navigation/native";
 
 const BottomTab = () => {
   const [activeTab, setActiveTab] = useState(0);
-  const navigation = useNavigation();
 
   const tabs = [
-    { link: "Dashboard", icon: "lightbulb", name: "Quest" },
-    { link: "TodoListScreen", icon: "calendar-today", name: "Todo" },
-    { link: "MotivationsScreen", icon: "spa", name: "Motivation" },
-    { link: "BooksScreen", icon: "book", name: "Books" },
+    { link: "./home", icon: "lightbulb", name: "Quest" },
+    { link: "./todo", icon: "calendar-today", name: "Todo" },
+    { link: "./motivation", icon: "spa", name: "Motivation" },
+    { link: "./book", icon: "book", name: "Books" },
   ];
 
   return (
@@ -27,7 +26,7 @@ const BottomTab = () => {
           }`}
           onPress={() => {
             setActiveTab(index);
-            navigation.navigate(tab.link);
+            router.navigate(tab.link);
           }}
         >
           <Icon
