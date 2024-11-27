@@ -29,12 +29,14 @@ const BottomTab = () => {
             router.navigate(tab.link);
           }}
         >
-          <Icon
-            name={tab.icon}
-            type="material"
-            size={24}
-            color={activeTab === index ? "black" : "white"}
-          />
+          <Text>
+            <Icon
+              name={tab.icon}
+              type="material"
+              size={24}
+              color={activeTab === index ? "black" : "white"}
+            />
+          </Text>
           <Text
             style={tw`mt-1 text-sm ${
               activeTab === index ? "text-black font-bold" : "text-white"

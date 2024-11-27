@@ -41,9 +41,10 @@ const Home = () => {
             containerStyle={tw`rounded-3xl p-5 w-4/5`}
             wrapperStyle={tw`bg-white/10 border-0`}
           >
-            <Card.Title style={tw`text-2xl font-bold text-green-500`}>
+            <Text style={tw`text-2xl font-bold text-green-500`}>
               Focus on Your Dreams!
-            </Card.Title>
+            </Text>
+
             <Card.Divider style={tw`border-green-500`} />
             {currentMainTask.task ? (
               <>
