@@ -49,7 +49,6 @@ const OnboardingScreen = () => {
       }))}
       onDone={() => router.replace("/main/home")}
       onSkip={() => router.replace("/main/home")}
-      containerStyles={tw`p-6`}
     />
   );
 };

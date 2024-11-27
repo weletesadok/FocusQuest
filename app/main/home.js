@@ -15,7 +15,7 @@ import {
 } from "../../state/appSlice";
 import DashboardBottom from "../../components/DashboardBottom";
 
-const StayFocusedScreen = () => {
+const Home = () => {
   const dispatch = useDispatch();
   const currentMainTask = useSelector(selectCurrentMainTask);
   const [task, setTask] = useState("");
@@ -99,4 +99,4 @@ const StayFocusedScreen = () => {
   );
 };
 
-export default StayFocusedScreen;
+export default Home;
